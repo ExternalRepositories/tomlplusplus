@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <meta charset="utf-8"/>
-  <title>toml::literals namespace | toml++ TOML
-for
-modern
-C++</title>
+  <title>toml::literals namespace | toml++ TOML for C++</title>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" rel="stylesheet"/>
   <link href="m-dark+documentation.compiled.css" rel="stylesheet"/>
-  <link href="tomlplusplus.css" rel="stylesheet"/>
   <link href="favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="#22272e" name="theme-color"/>
+  <meta content="toml++" name="twitter:title"/>
+  <meta content="toml++" property="og:title"/>
+  <meta content="toml++" itemprop="name"/>
+  <meta content="Mark Gillard" name="author"/>
+  <meta content="Mark Gillard" property="article:author"/>
+  <meta content="TOML for C++" name="description"/>
+  <meta content="TOML for C++" name="twitter:description"/>
+  <meta content="TOML for C++" property="og:description"/>
+  <meta content="TOML for C++" itemprop="description"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.6.1" name="generator"/>
+  <meta content="no-referrer-when-downgrade" name="referrer"/>
   <meta content="gbtcNgKlNiPSMKkYMw4zWFVWGPH_oU93m9n_-nb4qK8" name="google-site-verification"/>
-  <meta content="Header-only
-  TOML
-  config
-  file
-  parser
-  and
-  serializer
-  for
-  modern
-  C++." name="description"/>
-  <script src="tomlplusplus.js"></script>
+  <link href="poxy-0.6.1.css" rel="stylesheet"/>
+  <link href="poxy-0.6.1-dark.css" rel="stylesheet"/>
+  <script src="poxy-0.6.1.js"></script>
 </head>
 <body>
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="logo.png"/>toml++ <span class="m-thin">TOML
-for
-modern
-C++</span></a>
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="logo.png"/>toml++ <span class="m-thin">TOML for C++</span></a>
       <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
         <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
           <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
@@ -43,10 +40,10 @@ C++</span></a>
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li><a href="namespaces.html">Namespaces</a></li>
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="2">
             <li><a href="annotated.html">Classes</a></li>
-            <li><a class="github tpp-external" href="https://github.com/marzer/tomlplusplus/" target="_blank">Github</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a class="github poxy-external" href="https://github.com/marzer/tomlplusplus/" target="_blank">Github</a></li>
             <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
               <use href="#m-doc-search-icon-path"></use>
             </svg></a></li>
@@ -61,10 +58,10 @@ C++</span></a>
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          <span class="m-breadcrumb"><a href="namespacetoml.html">toml</a>::<wbr/></span>literals <span class="m-thin">namespace</span>
-         <span class="m-label m-info tpp-injected tpp-inline-namespace" title="All members of this namespace are automatically members of the parent namespace. It does not require an explicit 'using' statement.">inline</span></h1>
+          <span class="m-breadcrumb"><a href="namespacetoml.html">toml</a>::<wbr/></span>literals <span class="m-thin">namespace</span> <span class="m-label m-flat m-info">inline</span>
+        </h1>
         <p>Convenience literal operators for working with toml++.</p>
-        <div class="m-block m-default">
+        <nav class="m-block m-default poxy-toc">
           <h3>Contents</h3>
           <ul>
             <li>
@@ -74,31 +71,36 @@ C++</span></a>
               </ul>
             </li>
           </ul>
-        </div>
-<p>This namespace exists so you can safely hoist the UDL operators into another scope without dragging in everything in the toml namespace:</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;toml++/toml.h&gt;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="ns">toml::</span><span class="n">literals</span><span class="p">;</span>
+        </nav>
+<p>This namespace exists so you can safely hoist the toml++ literal operators into another scope without dragging in everything from the toml namespace:</p><pre class="m-code"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;toml++/toml.h&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">toml</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
 
-<span class="ut">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="k">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">tbl</span> <span class="o">=</span> <span class="s">"vals = [1, 2, 3]"</span><span class="sa">_toml</span><span class="p">;</span>
+<span class="w">    </span><span class="ns">toml</span><span class="o">::</span><span class="ut">table</span><span class="w"> </span><span class="n">tbl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"vals = [1, 2, 3]"</span><span class="sa">_toml</span><span class="p">;</span>
 
-    <span class="c1">// ... do stuff with the table generated by the "_toml" UDL ...</span>
+<span class="w">    </span><span class="c1">// ... do stuff with the table generated by the "_toml" literal ...</span>
 
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span></pre>
         <section id="func-members">
           <h2><a href="#func-members">Functions</a></h2>
           <dl class="m-doc">
             <dt>
               <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a401530e560c2dc540729af01e10b2a74">operator""_toml</a>(</span><span class="m-doc-wrap">const char* str,
-              <a class="m-doc tpp-injected tpp-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len) -&gt; <a class="m-doc" href="classtoml_1_1parse__result.html">parse_<wbr/>result</a></span>
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len) -&gt; <a class="m-doc" href="classtoml_1_1parse__result.html">parse_<wbr/>result</a></span>
             </dt>
             <dd>Parses TOML data from a string literal.</dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abb2307d66538d0d43dd074040f83224c">operator""_toml</a>(</span><span class="m-doc-wrap">const char8_t* str,
-              <a class="m-doc tpp-injected tpp-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len) -&gt; <a class="m-doc" href="classtoml_1_1parse__result.html">parse_<wbr/>result</a></span>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abb2307d66538d0d43dd074040f83224c">operator""_toml</a>(</span><span class="m-doc-wrap">const <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/language/types#Character_types" target="_blank">char8_t</a>* str,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len) -&gt; <a class="m-doc" href="classtoml_1_1parse__result.html">parse_<wbr/>result</a></span>
             </dt>
-            <dd>Parses TOML data from a utf8 string literal.</dd>
+            <dd>Parses TOML data from a UTF-8 string literal.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad406c84d960dd5bda91564f738f67d47">operator""_tpath</a>(</span><span class="m-doc-wrap">const char* str,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len) -&gt; <a class="m-doc" href="classtoml_1_1path.html">path</a></span>
+            </dt>
+            <dd>Parses a TOML path from a string literal.</dd>
           </dl>
         </section>
         <section>
@@ -106,7 +108,7 @@ C++</span></a>
           <section class="m-doc-details" id="a401530e560c2dc540729af01e10b2a74"><div>
             <h3>
               <span class="m-doc-wrap-bumper"><a class="m-doc" href="classtoml_1_1parse__result.html">parse_<wbr/>result</a> toml::<wbr/>literals::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a401530e560c2dc540729af01e10b2a74">operator""_toml</a>(</span><span class="m-doc-wrap">const char* str,
-              <a class="m-doc tpp-injected tpp-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len)</span></span>
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len)</span></span>
             </h3>
             <p>Parses TOML data from a string literal.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -126,21 +128,21 @@ C++</span></a>
               <tfoot>
                 <tr>
                   <th>Returns</th>
-                  <td><strong><em>With exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1table.html">toml::<wbr/>table</a>.<br/><strong><em>Without exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1parse__result.html">toml::<wbr/>parse_result</a> detailing the parsing outcome.</td>
+                  <td><strong><em>With exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1table.html">toml::<wbr/>table</a>. <strong><em>Without exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1parse__result.html">toml::<wbr/>parse_result</a>.</td>
                 </tr>
               </tfoot>
             </table>
-<pre class="m-code"><span class="k">using</span> <span class="k">namespace</span> <span class="ns">toml::</span><span class="n">literals</span><span class="p">;</span>
+<pre class="m-code"><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">toml</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
 
-<span class="k">auto</span> <span class="n">tbl</span> <span class="o">=</span> <span class="s">"a = 3"</span><span class="sa">_toml</span><span class="p">;</span>
-<span class="ns">std::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tbl</span><span class="p">[</span><span class="s">"a"</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="ns">std::</span><span class="n">endl</span><span class="p">;</span></pre><pre class="m-console"><span class="go">3</span></pre>
+<span class="k">auto</span><span class="w"> </span><span class="n">tbl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"a = 3"</span><span class="sa">_toml</span><span class="p">;</span>
+<span class="ns">std</span><span class="o">::</span><span class="ut">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="s">"a"</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span></pre><pre class="m-console"><span class="go">3</span></pre>
           </div></section>
           <section class="m-doc-details" id="abb2307d66538d0d43dd074040f83224c"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classtoml_1_1parse__result.html">parse_<wbr/>result</a> toml::<wbr/>literals::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abb2307d66538d0d43dd074040f83224c">operator""_toml</a>(</span><span class="m-doc-wrap">const char8_t* str,
-              <a class="m-doc tpp-injected tpp-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len)</span></span>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classtoml_1_1parse__result.html">parse_<wbr/>result</a> toml::<wbr/>literals::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abb2307d66538d0d43dd074040f83224c">operator""_toml</a>(</span><span class="m-doc-wrap">const <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/language/types#Character_types" target="_blank">char8_t</a>* str,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len)</span></span>
             </h3>
-            <p>Parses TOML data from a utf8 string literal.</p>
+            <p>Parses TOML data from a UTF-8 string literal.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
@@ -158,14 +160,46 @@ C++</span></a>
               <tfoot>
                 <tr>
                   <th>Returns</th>
-                  <td><strong><em>With exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1table.html">toml::<wbr/>table</a>.<br/><strong><em>Without exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1parse__result.html">toml::<wbr/>parse_result</a> detailing the parsing outcome.</td>
+                  <td><strong><em>With exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1table.html">toml::<wbr/>table</a>. <strong><em>Without exceptions:</em></strong> A <a class="m-doc" href="classtoml_1_1parse__result.html">toml::<wbr/>parse_result</a>.</td>
                 </tr>
               </tfoot>
             </table>
-<pre class="m-code"><span class="k">using</span> <span class="k">namespace</span> <span class="ns">toml::</span><span class="n">literals</span><span class="p">;</span>
+<pre class="m-code"><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">toml</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
 
-<span class="k">auto</span> <span class="n">tbl</span> <span class="o">=</span> <span class="sa">u8</span><span class="s">"a = 3"</span><span class="sa">_toml</span><span class="p">;</span>
-<span class="ns">std::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tbl</span><span class="p">[</span><span class="s">"a"</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="ns">std::</span><span class="n">endl</span><span class="p">;</span></pre><pre class="m-console"><span class="go">3</span></pre><aside class="m-note m-warning"><h4>Attention</h4><p>This overload is not available if your compiler does not support <a class="m-doc tpp-injected tpp-external" href="https://en.cppreference.com/w/cpp/language/types" target="_blank">char8_t</a>-based strings.</p></aside>
+<span class="k">auto</span><span class="w"> </span><span class="n">tbl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">u8</span><span class="s">"a = 3"</span><span class="sa">_toml</span><span class="p">;</span>
+<span class="ns">std</span><span class="o">::</span><span class="ut">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tbl</span><span class="p">[</span><span class="s">"a"</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span></pre><pre class="m-console"><span class="go">3</span></pre>
+          </div></section>
+          <section class="m-doc-details" id="ad406c84d960dd5bda91564f738f67d47"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classtoml_1_1path.html">path</a> toml::<wbr/>literals::<wbr/></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad406c84d960dd5bda91564f738f67d47">operator""_tpath</a>(</span><span class="m-doc-wrap">const char* str,
+              <a class="m-doc poxy-injected poxy-external" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> len)</span></span>
+            </h3>
+            <p>Parses a TOML path from a string literal.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">str</td>
+                  <td>The string data.</td>
+                </tr>
+                <tr>
+                  <td>len</td>
+                  <td>The string length.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>A <a class="m-doc" href="classtoml_1_1path.html">toml::<wbr/>path</a> generated from the string literal.</td>
+                </tr>
+              </tfoot>
+            </table>
+<pre class="m-code"><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">toml</span><span class="o">::</span><span class="nn">literals</span><span class="p">;</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"main.settings.devices[2]"</span><span class="n">_tpath</span><span class="p">;</span>
+<span class="ns">std</span><span class="o">::</span><span class="ut">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">path</span><span class="p">.</span><span class="n">parent_path</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span></pre><pre class="m-console"><span class="go">main.settings.devices</span></pre>
           </div></section>
         </section>
       </div>
@@ -206,23 +240,21 @@ C++</span></a>
     </div>
   </div>
 </div>
-<script src="search-v1.js"></script>
-<script async="async" src="searchdata-v1.js"></script>
+<script src="search-v2.js"></script>
+<script async="async" src="searchdata-v2.js"></script>
 <footer><nav>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <a class="tpp-external" href="https://github.com/marzer/tomlplusplus/" target="_blank">Github</a>
-•
+        
+    <a class="poxy-external" href="https://github.com/marzer/tomlplusplus/" target="_blank">Github</a>
+     • <a class="poxy-external" href="https://github.com/marzer/tomlplusplus/issues" target="_blank">Report an issue</a>
+     • <a href="md_poxy_changelog.html">Changelog</a>
+     • <a class="poxy-external" href="https://github.com/marzer/tomlplusplus/blob/master/LICENSE" target="_blank">License</a>
+     • <a download="" href="toml++.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+    <br/><br/>
+    Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
 
-<a class="tpp-external" href="https://github.com/marzer/tomlplusplus/issues" target="_blank">Report
-an
-issue</a>
-
-<br/><br/>Documentation
-generated
-using
-<a class="tpp-external" href="https://mcss.mosra.cz/" target="_blank">m.css</a>
       </div>
     </div>
   </div>
